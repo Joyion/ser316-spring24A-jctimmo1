@@ -53,4 +53,16 @@ public class BlackBoxGiven {
         assertEquals(1, game.getGameStatus());
     }
 
+    @Test
+    public void wordIsCorrectLength() {
+        game.initGame("lion", "Joy");
+        int count = game.countLetters('l');
+        assert(count == 1);
+    }
+
+    @Test
+    public void letterIsInWord() {
+
+    }
+
 }

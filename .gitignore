@@ -1,5 +1,4 @@
 .gradle
 build
 .idea
-cls
 *.DS_STORE
