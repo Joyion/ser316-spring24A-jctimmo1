@@ -183,7 +183,32 @@ public class Game {
      */
     public double makeGuess(String guess) {
         // Will be implemented in assignment 3
-        return 0.0;
+        double pointsToDeduct = 0;
+        guesses.add(guess);
+        if(guess.equalsIgnoreCase(this.getAnswer())) {
+            return 0;
+        }
+        // if guess contains single letter
+        if(guess.length() == 1) {
+            if(this.getAnswer().contains(guess)) {
+                double letterCount = this.countLetters(guess.charAt(0));
+               // System.out.println("Number of letters: " + letterCount);
+                pointsToDeduct += 1.0 + (letterCount / 100);
+            }
+
+        } else {
+            if(getAnswer().length() == guess.length()) {
+                pointsToDeduct += 2;
+            } else if(getAnswer().length() > guess.length()) {
+                System.out.println("tooshort");
+                pointsToDeduct += 2.2;
+            } else if(getAnswer().length() < guess.length()) {
+                pointsToDeduct += 2.1;
+            }
+        }
+
+        System.out.println(pointsToDeduct);
+        return pointsToDeduct;
     }
 
     /**
