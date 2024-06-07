@@ -110,7 +110,7 @@ public class Game {
     public Game(String name){
         this.name = name;
         setRandomWord();
-        setPoints(5);
+        setPoints(10);
 
     }
 
