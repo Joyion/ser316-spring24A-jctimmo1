@@ -10,5 +10,7 @@
 |  6  | Game.java, line 87,  |                               Duplicate code, could just return result                               |    CS    | low      |                                 
 |  7  | Game.java, line 79,  |           Missing code to increment result if the guess word arraylist contains the letter           |    FD    | Major    |                        
 |  8  | Game.java, line 78,  |                   Doesn't check if words in guesses contains the letter correctly                    |    FD    | Major    |            
+|  9  | Game.java, line 113, |                             Initiates game to the wrong value for points                             |    FD    | Major    |            
+
 
                  
