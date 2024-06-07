@@ -77,6 +77,7 @@ public class Game {
                 String current = String.valueOf(this.answer.charAt(i));
                 if (guesses.contains(current)) {
                     System.out.print(this.answer.charAt(i));
+                    result++;
                 }
                 else {
                     System.out.print('_');
