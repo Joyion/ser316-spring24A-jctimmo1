@@ -2,7 +2,7 @@
 
 | ID# |       Location       |                                         Problem Description                                          | Category | Severity | 
 |:---:|:--------------------:|:----------------------------------------------------------------------------------------------------:|:--------:|----------|
-|  1  |  Game.java, line 13  |                                      Class vairable not private                                      |    CG    | low      |
+|  1  |  Game.java, line 13  |                                      Class variable not private                                      |    CG    | low      |
 |  2  | Game.java, line 129, | duplicate code, refactor to call super with default params and possibly combine method with initGame |    CS    | low      | 
 |  3  | Game.java, line 95,  |                                   Missing proper header for method                                   |    CG    | low      |
 |  4  | Game.java, line 109  |                      No space between ) and {. Inconsistent styling for methods                      |    CG    | low      |
