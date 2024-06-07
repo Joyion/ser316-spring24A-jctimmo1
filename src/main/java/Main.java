@@ -17,7 +17,7 @@ public class Main {
         while (newgame.getGameStatus() == 0) {
             String message = scanner.nextLine();
             System.out.println(newgame.makeGuess(message));
-            System.out.println("Score: " + newgame.points);
+            System.out.println("Score: " + newgame.getPoints());
             newgame.countCorrectLetters();
         }
     }
