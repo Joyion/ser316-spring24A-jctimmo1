@@ -119,7 +119,7 @@ public class Game {
      * @param name
      */
     public Game(String fixedWord, String name){
-        this.name = "Anna";
+        this.name = name;
         this.answer = fixedWord;
         setPoints(10);
     }
@@ -128,9 +128,7 @@ public class Game {
      * Constructs a new game with no arguments, empty name and answer
      */
     public Game(){
-        this.name = "";
-        this.answer = "";
-        setPoints(10);
+        this("", "");
     }
 
     /**
