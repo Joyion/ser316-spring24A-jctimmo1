@@ -200,14 +200,13 @@ public class Game {
             if(getAnswer().length() == guess.length()) {
                 pointsToDeduct += 2;
             } else if(getAnswer().length() > guess.length()) {
-                System.out.println("tooshort");
                 pointsToDeduct += 2.2;
             } else if(getAnswer().length() < guess.length()) {
                 pointsToDeduct += 2.1;
             }
         }
 
-        System.out.println(pointsToDeduct);
+      //.  System.out.println(pointsToDeduct);
         return pointsToDeduct;
     }
 
