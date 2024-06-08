@@ -73,19 +73,22 @@ public class Game {
     public int countCorrectLetters() {
         int result = 0;
         if (!guesses.isEmpty()) {
+            // Is it supposed to count each letter even if the same letter or increment on unique letter?
             for(int i = 0; i < this.answer.length(); i++) {
                 String current = String.valueOf(this.answer.charAt(i));
-                if (guesses.contains(current)) {
-                    System.out.print(this.answer.charAt(i));
-                    result++;
-                }
-                else {
-                    System.out.print('_');
+                // modify to check all the guesses
+                for(int g = 0; g < guesses.size(); g++) {
+                    if (guesses.get(g).contains(current)) {
+                        System.out.print(this.answer.charAt(i));
+                        result++;
+                    }
+                    else {
+                        System.out.print('_');
+                    }
                 }
             }
-            System.out.println();
+   //         System.out.println();
         }
-        else return 0;
         return result;
     }
     
