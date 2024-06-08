@@ -16,7 +16,7 @@ public class GivenWhiteBox {
     @Test
     public void startGame() {
         Game game = new Game("lion", "Dr. M");
-        assertEquals(10, game.getPoints());
+        assert(game.getPoints() == 10);
     }
 
     // Test Case 2
@@ -32,7 +32,7 @@ public class GivenWhiteBox {
     @Test
     public void noCorrectLetters_withNoCorrectChar_Test() {
         game = new Game("James", "James");
-        game.makeGuess("a");
+        game.makeGuess("b");
         int c = game.countCorrectLetters();
         assert(c == 0);
     }
@@ -42,9 +42,9 @@ public class GivenWhiteBox {
     public void noCorrectLetters_withManyCorrectChar_Test() {
         game = new Game("Babboon", "James");
         game.makeGuess("b");
-        game.makeGuess("c");
+        game.makeGuess("a");
         int c = game.countCorrectLetters();
-        assert(c == 2);
+        assert(c == 3);
     }
 
 
