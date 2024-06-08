@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Game {
 
     /** Holds the points for the game. */
-    private int points;
+    private double points;
     
     /** Holds the round of the game. */
     int round;
@@ -62,7 +62,7 @@ public class Game {
     /**
      * Gets the score for the game.
      */
-    public int getPoints() {
+    public double getPoints() {
         return this.points;
     }
 
@@ -208,6 +208,8 @@ public class Game {
                 pointsToDeduct += 2.1;
             }
         }
+
+        points = points - pointsToDeduct;
 
       //.  System.out.println(pointsToDeduct);
         return pointsToDeduct;
