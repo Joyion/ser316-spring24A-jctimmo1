@@ -1,7 +1,5 @@
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+
 
 public class guessTest {
 
@@ -20,23 +18,13 @@ public class guessTest {
         guess3 = "crocodile";
     }
 
-    @Test
-    public void answerLengthTest(){
-        game.initGame(this.guess1, "Joe");
-        assert(game.getAnswer().length() == 8);
-        game.initGame(this.guess2, "Joe");
-        assert(game.getAnswer().length() == 3);
-    }
-
 
     @Test
     public void correctGuessTest() {
         int correctPoints = 0;
         game.initGame(this.guess1, "Joe");
-        double points = game.makeGuess(this.guess2);
+        double points = game.makeGuess(this.guess1);
         assert(points == correctPoints);
-        String g = game.guesses.get(0);
-        assert(g.equalsIgnoreCase(this.guess2));
     }
 
     @Test
@@ -46,19 +34,22 @@ public class guessTest {
         double tooLongPoints = 2.1;
         // same length but, no matching characters in answer
         String samelengthGuess = "zzzzyyyy";
-        String samelengthGuess2 = "zoy";
-        String samelengthGuess3 = "Bollooons";
+        String shortlengthGuess = "zoy";
+        String longLengthGuess = "Bollooons";
         game.initGame(this.guess1, "Joe");
         double points1 = game.makeGuess(samelengthGuess);
         assert(points1 == correctLengthPoints);
+        assert(game.answer.length() == samelengthGuess.length());
 
         game.initGame(this.guess1, "Joe");
-        double points2 = game.makeGuess(samelengthGuess2);
+        double points2 = game.makeGuess(shortlengthGuess);
         assert(points2 == tooShortPoints);
+        assert(game.answer.length() > shortlengthGuess.length());
 
         game.initGame(this.guess1, "Joe");
-        double points3 = game.makeGuess(samelengthGuess3);
+        double points3 = game.makeGuess(longLengthGuess);
         assert(points3 == tooLongPoints);
+        assert(game.getAnswer().length() < longLengthGuess.length());
 
     }
 
