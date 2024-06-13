@@ -25,14 +25,13 @@ dependencies {
     implementation files('cls/')
 }
 
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-}
+<<<<<<< HEAD
 jacoco {
     toolVersion = "0.8.11"
     reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
 jacocoTestReport {
+    dependsOn test
     reports {
         xml.required = false
         csv.required = false
@@ -41,6 +40,13 @@ jacocoTestReport {
 }
 
 //apply plugin: 'checkstyle'
+=======
+test {
+    exclude '**/BlockBoxGive.java'
+}
+
+// apply plugin: 'checkstyle'
+>>>>>>> Blackbox
 // checkstyle {
 //   // Keep checkstyle a little quieter
 //   ignoreFailures = true
