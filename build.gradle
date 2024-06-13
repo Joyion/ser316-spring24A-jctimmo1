@@ -45,7 +45,7 @@ test {
 }
 
 // apply plugin: 'checkstyle'
->>>>>>> Blackbox
+
 // checkstyle {
 //   // Keep checkstyle a little quieter
 //   ignoreFailures = true
