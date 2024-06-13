@@ -41,7 +41,7 @@ jacocoTestReport {
 
 //apply plugin: 'checkstyle'
 test {
-    exclude '**/BlockBoxGive.java'
+    exclude '**/BlackBoxGiven.class'
 }
 
 // apply plugin: 'checkstyle'
