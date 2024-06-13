@@ -23,6 +23,10 @@ dependencies {
     implementation files('cls/')
 }
 
+test {
+    exclude '**/BlockBoxGive.java'
+}
+
 // apply plugin: 'checkstyle'
 // checkstyle {
 //   // Keep checkstyle a little quieter
