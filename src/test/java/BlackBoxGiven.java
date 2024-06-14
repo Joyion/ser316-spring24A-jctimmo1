@@ -1,10 +1,9 @@
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
 import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.Collection;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.*;
 
@@ -61,8 +60,6 @@ public class BlackBoxGiven {
     }
 
     @Test
-    public void letterIsInWord() {
-
-    }
+    public void letterIsInWord() {}
 
 }
