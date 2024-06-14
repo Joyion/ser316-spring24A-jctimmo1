@@ -39,7 +39,6 @@ jacocoTestReport {
     }
 }
 
-//apply plugin: 'checkstyle'
 test {
     exclude '**/BlackBoxGiven.class'
 }
