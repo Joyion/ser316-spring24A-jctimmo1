@@ -57,7 +57,7 @@ public class BlackBoxGiven {
     public void wordIsCorrectLength() {
         game.initGame("lion", "Joy");
         int count = game.countLetters('l');
-        assert(count == 1);
+        assert (count == 1);
     }
 
     @Test

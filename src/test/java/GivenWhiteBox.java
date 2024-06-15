@@ -16,7 +16,7 @@ public class GivenWhiteBox {
     @Test
     public void startGame() {
         Game game = new Game("lion", "Dr. M");
-        assert(game.getPoints() == 10);
+        assert (game.getPoints() == 10);
     }
 
     // Test Case 2
@@ -25,7 +25,7 @@ public class GivenWhiteBox {
         game = new Game("James", "James");
         game.makeGuess("a");
         int c = game.countCorrectLetters();
-        assert(c == 1);
+        assert (c == 1);
     }
 
     // Test Case 3
@@ -34,7 +34,7 @@ public class GivenWhiteBox {
         game = new Game("James", "James");
         game.makeGuess("b");
         int c = game.countCorrectLetters();
-        assert(c == 0);
+        assert (c == 0);
     }
 
     // Test Case 1 and 4
@@ -44,7 +44,7 @@ public class GivenWhiteBox {
         game.makeGuess("b");
         game.makeGuess("a");
         int c = game.countCorrectLetters();
-        assert(c == 3);
+        assert (c == 3);
     }
 
 

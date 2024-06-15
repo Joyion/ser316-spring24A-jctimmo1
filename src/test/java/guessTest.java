@@ -24,7 +24,7 @@ public class guessTest {
         int correctPoints = 0;
         game.initGame(this.guess1, "Joe");
         double points = game.makeGuess(this.guess1);
-        assert(points == correctPoints);
+        assert (points == correctPoints);
     }
 
     @Test
@@ -38,18 +38,18 @@ public class guessTest {
         String longLengthGuess = "Bollooons";
         game.initGame(this.guess1, "Joe");
         double points1 = game.makeGuess(samelengthGuess);
-        assert(points1 == correctLengthPoints);
-        assert(game.answer.length() == samelengthGuess.length());
+        assert (points1 == correctLengthPoints);
+        assert (game.answer.length() == samelengthGuess.length());
 
         game.initGame(this.guess1, "Joe");
         double points2 = game.makeGuess(shortlengthGuess);
-        assert(points2 == tooShortPoints);
-        assert(game.answer.length() > shortlengthGuess.length());
+        assert (points2 == tooShortPoints);
+        assert (game.answer.length() > shortlengthGuess.length());
 
         game.initGame(this.guess1, "Joe");
         double points3 = game.makeGuess(longLengthGuess);
-        assert(points3 == tooLongPoints);
-        assert(game.getAnswer().length() < longLengthGuess.length());
+        assert (points3 == tooLongPoints);
+        assert (game.getAnswer().length() < longLengthGuess.length());
 
     }
 
@@ -61,7 +61,7 @@ public class guessTest {
         game.initGame(this.guess1, "Joe");
         double points = game.makeGuess(letter);
       //  System.out.println(points);
-        assert(points == correctPoints);
+        assert (points == correctPoints);
     }
 
 }
