@@ -1,12 +1,11 @@
 plugins {
-     id "com.github.spotbugs" version "5.0.12"
-     id "checkstyle"
+//     id "com.github.spotbugs" version "5.0.12"
+    id("com.github.spotbugs") version "6.0.17"
+    id "checkstyle"
 }
 
 apply plugin: 'application'
 apply plugin: 'jacoco'
-
-
 
 mainClassName = 'Main'
 
@@ -68,12 +67,12 @@ test {
 // To generate an HTML report instead of XML
  spotbugsMain {
      reports {
-         xml.enabled = false
-         html.enabled = true
+         xml.required.set(false)
+         html.required.set(true)
      }
  }
  spotbugs {
      ignoreFailures = true
      showProgress = true
-     effort = 'max'
+//     effort = 'max'
  }
